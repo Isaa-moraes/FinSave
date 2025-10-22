@@ -1,0 +1,98 @@
+.noticias {
+    text-align: center;
+    padding: 60px 0; /* Ajustado para não ter padding lateral, o container terá */
+    background-color: #ffffff;
+  }
+  
+  .noticias h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f1724;
+    margin-bottom: 40px;
+    padding: 0 20px; /* Adiciona padding ao título */
+  }
+  
+  .noticias-container {
+    display: flex;
+    /* flex-wrap: wrap; <-- REMOVIDO */
+    flex-wrap: nowrap; /* <-- ADICIONADO: Garante que os itens fiquem em linha única */
+    /* justify-content: center; <-- REMOVIDO */
+    justify-content: flex-start; /* <-- ADICIONADO: Alinha os itens no início */
+    gap: 30px;
+  
+    /* --- MÁGICA DO CARROSSEL --- */
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Ativa o "snap" (trava) no eixo X */
+    scroll-behavior: smooth; /* Rolagem suave ao usar links (se houver) */
+    padding: 10px 30px; /* Espaçamento interno para os itens não colarem nas bordas */
+    
+    /* --- Para esconder a barra de rolagem --- */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos iOS */
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+  }
+  
+  /* Esconde a barra de rolagem no Chrome, Safari e Opera */
+  .noticias-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .noticia {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    /* max-width: 340px; <-- REMOVIDO */
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+    /* --- MÁGICA DO CARROSSEL --- */
+    flex: 0 0 340px; /* Define um tamanho fixo: não cresce, não encolhe, base de 340px */
+    scroll-snap-align: center; /* Centraliza o item que está em foco no "snap" */
+  }
+  
+  .noticia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+  
+  .noticia .img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .noticia .link {
+    display: inline-block;
+    padding: 6px 14px;
+  }
+  .noticias {
+    position: relative; /* necessário pra setas absolutas */
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+  }
+  
+  .arrow.left {
+    left: 10px;
+  }
+  
+  .arrow.right {
+    right: 10px;
+  }
+  
+  .arrow:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
