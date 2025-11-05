@@ -6,7 +6,7 @@
     <title>FinSave - Entre em contato conosco!</title>
     <link rel="shortcut icon" type="image/x-icon" href="img.png" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="contato.css" />
   </head>
   <body>
     <header class="site-header" role="banner">
@@ -42,97 +42,122 @@
     </header>
 
     <section class="ajuda-header">
-      <h1>Como nós podemos te ajudar hoje?</h1>
+      <div class="partedecimadocontato">
+        <img class="contato" src="cliente.png" alt="contato" />
+        <h3 class="titulocontato">CONTATO</h3>
+      </div>
+
+      <h1>Como nós podemos</h1>
+      <h2>te ajudar hoje?</h2>
+
       <div class="ajuda-cards-novo">
         <div class="card-item">
-          <div class="icone">💬</div> <h3>Conversar no Chat</h3>
+          <img class="icone" src="conversando.png" alt="conversando" />
+          <h3>Conversar no Chat</h3>
           <p>Converse com nosso assistente virtual.</p>
         </div>
         <div class="card-item">
-          <div class="icone">📱</div> <h3>Falar no WhatsApp</h3>
+          <img class="icone" src="whatsapp.png" alt="whats" />
+          <h3>Falar no WhatsApp</h3>
           <p>Suporte amigável e direto por mensagem.</p>
         </div>
         <div class="card-item">
-          <div class="icone">❓</div> <h3>Central de ajuda</h3>
+          <img class="icone" src="socorro.png" alt="help" />
+          <h3>Central de ajuda</h3>
           <p>Principais dúvidas e guias sobre finanças.</p>
         </div>
         <div class="card-item">
-          <div class="icone">📧</div> <h3>Abra um chamado</h3>
+          <img class="icone" src="e-mail.png" alt="email" />
+          <h3>Abra um chamado</h3>
           <p>Nossa ajuda de onde estiver.</p>
         </div>
       </div>
     </section>
+    <div class="meio">
+      <section class="mensagem-contato-novo">
+        <div class="formulario-novo">
+          <h2>Deixe a sua mensagem</h2>
+          <p class="subtitulo">Queremos te responder o quanto antes!</p>
+          <form>
+            <div class="campos-duplos">
+              <div class="campo">
+                <label for="nome">Qual o seu nome?</label>
+                <input type="text" id="nome" name="nome" required />
+              </div>
+              <div class="campo">
+                <label for="telefone">Qual o seu telefone?</label>
+                <input type="tel" id="telefone" name="telefone" required />
+              </div>
+            </div>
 
-            <section class="mensagem-contato-novo">
-        
-        <div class="formulario-novo">
-          <h2>Deixe a sua mensagem</h2>
-          <p class="subtitulo">Queremos te responder o quanto antes!</p>
+            <div class="campo campo-cheio">
+              <label for="email">Qual seu melhor e-mail?</label>
+              <input type="email" id="email" name="email" required />
+            </div>
 
-          <form>
-            <div class="campos-duplos">
-              <div class="campo">
-                <label for="nome">Qual o seu nome?</label>
-                <input type="text" id="nome" name="nome" required>
-              </div>
-              <div class="campo">
-                <label for="telefone">Qual o seu telefone?</label>
-                <input type="tel" id="telefone" name="telefone" required>
-              </div>
-            </div>
+            <div class="campo campo-cheio">
+              <label for="assunto">Qual o assunto?</label>
+              <input type="text" id="assunto" name="assunto" required />
+            </div>
 
-            <div class="campo campo-cheio">
-              <label for="email">Qual seu melhor e-mail?</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="campo campo-cheio">
-              <label for="assunto">Qual o assunto?</label>
-              <input type="text" id="assunto" name="assunto" required>
-            </div>
+            <div class="campo campo-cheio">
+              <label for="mensagem">Como podemos te ajudar?</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="5"
+                required
+              ></textarea>
+            </div>
 
-            <div class="campo campo-cheio">
-              <label for="mensagem">Como podemos te ajudar?</label>
-              <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-            </div>
+            <button type="submit" class="btn-enviar-novo">
+              Enviar mensagem
+            </button>
+          </form>
+        </div>
+      </section>
 
-                        <button type="submit" class="btn-enviar-novo">
-              Enviar mensagem
-            </button>
-          </form>
-        </div>
+      <div class="detalhes-contato-novo">
+        <h2>Detalhes de contato</h2>
+        <div class="detalhe-item">
+          <h3>
+            <img
+              class="detalhescontato"
+              src="calendario-diario.png"
+              alt="hora"
+            />Horário de atendimento
+          </h3>
+          <p>De segunda a sexta, das 8h às 18h</p>
+        </div>
 
-        <div class="detalhes-contato-novo">
-          <h2>Detalhes de contato</h2>
-          
-                    <div class="detalhe-item">
-            <h3>⏰ Horário de atendimento</h3>
-            <p>De segunda a sexta, das 8h às 18h</p>
-          </div>
-          
-                    <div class="detalhe-item">
-            <h3>📍 Endereço</h3>
-            <p>Rua das Finanças, 100 - Bairro Investimento</p>
-            <p>São Paulo, SP, 01000-000</p>
-          </div>
+        <div class="detalhe-item">
+          <h3>
+            <img class="detalhescontato" src="mapa.png" alt="mapa" /> Endereço
+          </h3>
+          <p>Rua das Finanças, 100 - Bairro Investimento</p>
+          <p>São Paulo, SP, 01000-000</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d896.5125774957243!2d-50.88349058169075!3d-21.80047992740139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949425a054069693%3A0x8303e1f70ffeff00!2sSesi!5e0!3m2!1spt-BR!2sbr!4v1762367684808!5m2!1spt-BR!2sbr" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
-                    <div class="detalhe-item">
-            <h3>📧 E-mail</h3>
-            <p>suporte@finsave.com</p>
-          </div>
+        <div class="detalhe-item">
+          <h3>
+            <img class="detalhescontato" src="enviei.png" alt="email" /> E-mail
+          </h3>
+          <p>suporte@finsave.com</p>
+        </div>
 
-                    <div class="detalhe-item">
-            <h3>📞 Telefone</h3>
-            <p>(11) 9999-9999</p>
-          </div>
-        </div>
-      </section>
-    </main>
-
+        <div class="detalhe-item">
+          <h3>
+            <img class="detalhescontato" src="ligar.png" alt="ligar" /> Telefone
+          </h3>
+          <p>(11) 9999-9999</p>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <div class="footer-content">
-        <img class="logofinal" src="imgfinal.png" alt="logofinal">
+        <img class="logofinal" src="imgfinal.png" alt="logofinal" />
         <p>Tudo que você precisa para organizar suas finanças!</p>
 
         <ul class="socials">
@@ -143,7 +168,8 @@
 
         <p class="copyright">
           &copy; 2025 FinSave. Todos os direitos reservados.<br />
-          Desenvolvido por <span class="author1">Isadora Moraes</span> e <span class="author2">Maria Fernanda Bighi Siqueira</span>
+          Desenvolvido por <span class="author1">Isadora Moraes</span> e
+          <span class="author2">Maria Fernanda Bighi Siqueira</span>
         </p>
       </div>
     </footer>

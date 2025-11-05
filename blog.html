@@ -40,8 +40,27 @@
       </div>
     </header>
 
+    <h1>O que você gostaria de ver no mundo das finanças hoje?</h1>
+  
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Digite aqui...">
+  <button onclick="search()">Buscar</button>
+</div>
+
+<script>
+  function search() {
+    const input = document.getElementById("searchInput").value.trim();
+    if (input === "") {
+      alert("Digite algo para pesquisar");
+    } else {
+      alert(`Você pesquisou: "${input}"`);
+    }
+  }
+</script>
+
+
     <section class="noticias">
-      <h1>Veja nossas notícias mais lidas</h1>
+      <h1>Veja nossas notícias mais lidas:</h1>
     
       <div class="noticias-container">
     

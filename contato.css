@@ -1,9 +1,12 @@
+
 body {
-     font-family: sans-serif;
-     background-color: #f5f5f5;
-     color: #1f1f1f;
+    font-family: sans-serif;
+    background-color: #f2f8f5;
+    color: #1f1f1f;
 }
 
+
+/* CABEÇALHO DE CONTATO */
 .contato-main-novo {
     width: 90%;
     max-width: 1200px;
@@ -12,26 +15,58 @@ body {
     background-color: #f2f8f5;
 }
 
+.partedecimadocontato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.contato {
+    width: 30px;
+    height: 30px;
+}
+
+.titulocontato {
+    background-color: #ffffff;
+    margin: 10px;
+    padding: .7rem 1.6rem;
+    border-radius: 99rem;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
 .ajuda-header {
     text-align: center;
     margin-bottom: 40px;
     padding: 60px 0 80px; 
     position: relative; 
     overflow: hidden;
+    background-color: #f2f8f5;
 }
 
-.ajuda-header h1 {
+.ajuda-header h1, h2 {
     font-size: 2.8rem;
     margin-bottom: 50px; 
-    color: #2c3e50;
+    color: #252531;
+    padding: 0%;
+    line-height: 1px;
+    font-weight: 520;
 }
 
+/* CARDS DE CONTATO  */
 .ajuda-cards-novo {
     display: flex;
-    justify-content: center; /* Centraliza a linha de cards */
-    gap: 30px; /* Aumenta um pouco o espaçamento entre eles */
+    justify-content: center;
+    gap: 30px; 
     margin-bottom: 40px;
-    padding: 0 5%; /* Adiciona um padding horizontal para não grudar nas bordas */
+    padding: 0 5%; 
+}
+
+.icone {
+    width: 50px;
+    height: 50px;
 }
 
 .ajuda-header::before {
@@ -58,35 +93,21 @@ body {
 
 .card-item {
     background-color: #ffffff;
-    width: 200px; /* Define uma largura fixa ou base */
-    min-height: 200px; /* Garante que todos tenham a mesma altura */
+    width: 200px; 
+    min-height: 200px; 
     padding: 25px;
-    border-radius: 12px; /* Cantos mais arredondados */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Sombra mais suave e evidente */
+    border-radius: 12px; 
+    box-shadow: 0 15px 20px #e4fff0; 
     text-align: center;
-    border: 1px solid #e0e0e0; /* Borda sutil */
-    border-top: none; /* Remove a borda superior verde forte que você tinha */
+    border: 1px solid #e0e0e0;
+    border-top: none;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
 .card-item:hover {
-    transform: translateY(-8px); /* Efeito de elevação mais notável */
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15); /* Sombra maior no hover */
-}
-
-.card-item .icone {
-    font-size: 2.5rem; /* Ícones maiores */
-    margin-bottom: 15px;
-    color: #4b9468; /* Use um tom de verde relacionado à sua paleta */
-    display: inline-block;
-    /* Estilo de fundo do ícone (o que parece um círculo amarelo/verde no vídeo) */
-    background-color: #f7f7f7; /* Fundo sutil para o círculo */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    line-height: 50px; /* Centraliza verticalmente o ícone */
-    border: 1px solid #e0e0e0;
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15); 
 }
 
 .card-item h3 {
@@ -103,13 +124,19 @@ body {
 }
 
 
+/* FORMULÁRIO DE CONTATO E DETALHES */
+.meio{
+    display: flex;
+    justify-content: space-around;
+}
 .mensagem-contato-novo {
     display: flex; 
-    justify-content: space-between;
-    gap: 30px;
+    
+    background-color: #f2f8f5;
 }
 
-.formulario-novo, .detalhes-contato-novo {
+.formulario-novo {
+    width: 600px;
     background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
@@ -117,15 +144,11 @@ body {
 }
 
 .formulario-novo {
-    flex: 2; 
-    border-left: 5px solid #FFD700; 
+    flex: auto; 
 }
 
-.detalhes-contato-novo {
-    flex: 1; 
-}
-
-.formulario-novo h2, .detalhes-contato-novo h2 {
+.formulario-novo h2, 
+.detalhes-contato-novo h2 {
     font-size: 1.8rem;
     color: #2c3e50;
     margin-bottom: 10px;
@@ -138,13 +161,7 @@ body {
 }
 
 .formulario-novo form {
-    display: flex;
     flex-direction: column;
-}
-
-.campos-duplos {
-    display: flex;
-    gap: 20px;
 }
 
 .campo {
@@ -155,16 +172,15 @@ body {
     flex: 1;
 }
 
-.campo-cheio {
+.campo-cheio, .campos-duplos {
     width: 100%;
 }
 
 .formulario-novo label {
-    display: block;
     margin-bottom: 5px;
     font-weight: 600;
     color: #444;
-    font-size: 0.95rem;
+    
 }
 
 .formulario-novo input[type="text"],
@@ -204,26 +220,37 @@ body {
 }
 
 .btn-enviar-novo:hover {
-  background-color: #1e8449; 
+    background-color: #1e8449; 
 }
 
 
+/*  DETALHES DE CONTATO */
 .detalhes-contato-novo {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    width: 600px;
 }
 
 .detalhe-item h3 {
-  font-size: 1.1rem;
-  color: #329a43; 
-  margin-bottom: 5px;
-  padding-bottom: 3px;
-  border-bottom: 1px dashed #eee;
+    font-size: 1.1rem;
+    color: #329a43; 
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+    border-bottom: 1px dashed #eee;
 }
 
 .detalhe-item p {
-  color: #555;
-  line-height: 1.4;
-  font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.detalhescontato {
+    width: 30px;
+    height: 30px;
 }
